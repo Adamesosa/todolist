@@ -1,0 +1,222 @@
+:root{
+
+    --colorBg1: rgb(199, 38, 172);
+
+    --colorBg2:rgb(200, 121, 219);
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // background: linear-gradient(to right, rgb(113, 113, 238), rgb(214, 124, 241) );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 2rem;
+    animation-name: colorBackground;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+
+}
+@keyframes colorBackground{
+    from{
+        background: var(--colorBg1); 
+    } 
+    to{
+        background: var(--colorBg2); 
+    }
+}
+.titre{
+    text-decoration: lighten($color: #a7a6a6, $amount: 0);
+
+}
+
+.sort-div{
+    border: solid rgba(255, 255, 255, 0.452) 1px;
+    border-radius: 10px;
+    display: flex;
+    width: 20vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button{
+        
+        display: flex;
+        flex: 4;
+        text-align: center;
+        justify-content: center;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        margin: 5px;
+        background:white;
+        color:  rgb(113, 113, 238);
+    }
+    button:focus{
+        outline: none;
+    }
+}
+
+button:hover{
+    opacity: 0.5;
+    transition: all 0.3s ease;
+
+
+}
+
+button:active{
+
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+
+.todo-input{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+
+}
+
+.add-todo:focus{
+    outline: none;
+}
+
+.add-todo{
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 25px;
+
+
+    i{
+        color: white;
+        font-size: 3rem;
+    }
+
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list{
+    list-style-type: none;
+    width: 40vw;
+
+
+}
+
+
+
+
+.todo-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s ease;
+    animation-name:edited;
+
+
+
+    li,.edit-input{
+        flex: 9;
+        background-color: white;
+        padding: 1px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+
+    }
+
+    .todo-check , .todo-edit, .todo-delete,.todo-newcheck {
+        border: none;
+        background: none;
+        outline: none;
+        flex: 1;
+        padding: 2px 0px;
+        i{
+            color: white;
+            font-size: 1.5rem;
+
+        }
+    }
+
+    
+
+}
+
+
+
+.fa-trash-alt,.fa-edit,.fa-check-circle{
+    pointer-events: none;
+}
+
+.checked{
+    text-decoration: line-through;
+    opacity: 0.5;
+
+}
+
+
+
+.muted{
+    display: none;
+
+}
+
+
+.invisible{
+    opacity: 0;
+    transition-duration:0.5s;
+
+
+
+
+}
+
+.display-None{
+    display: none;
+
+}
+
+.fade{
+    opacity: 0;
+    transition-duration:1s;
+
+}
+
+.anim{
+    animation-name: edited;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+
+
+
+
+}
+
+@keyframes edited{
+
+    from{
+        opacity:1;
+
+    }
+    to{
+        opacity:0.5
+
+    }
+
+}
+
